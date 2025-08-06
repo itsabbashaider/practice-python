@@ -39,7 +39,7 @@ print("2.multipy")
 print("3.subtract")
 print("4.divide")
 print("5.Modulo")
-print("Percent")
+print("6.Percent")
 
 choice = input("Enter choice (1/2/3/4/5/6): ")
 
