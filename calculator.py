@@ -34,26 +34,31 @@ def Percent(x, y):
     return round((x / y )* 100, 2)
 def Power(x, y):
     return x ** y
-
-
-num1 = float(input("Enter first number: "))
-choice = input("Enter choice [+:*:-:/:|:%:^]: ")
-num2 = float(input("Enter second number: "))
-
-
-if choice == '+':
-    print("Result:", (add(num1, num2)))
-elif choice == '-':
-    print("Result:", (subtract(num1, num2)))
-elif choice == '*':
-    print("Result:", (multiply(num1, num2)))
-elif choice == '/':
-    print("Result:", divide(num1, num2))
-elif choice == '|':
-    print("Result:", Modulo(num1, num2))
-elif choice == '%':
-    print("Result:", str(Percent(num1, num2)) +"%")
-elif choice == '^':
-    print("Result:", Power(num1, num2))
-else:
-    print("Invalid input")
+exite_key = "E"
+while True:
+    try:
+        num1 = float(input("Enter first number: "))
+        choice = input("Enter choice [+:*:-:/:|:%:^]: ")
+        num2 = float(input("Enter second number: "))
+        
+        if choice == '+':
+            print("Result:", (add(num1, num2)))
+        elif choice == '-':
+            print("Result:", (subtract(num1, num2)))
+        elif choice == '*':
+            print("Result:", (multiply(num1, num2)))
+        elif choice == '/':
+            print("Result:", divide(num1, num2))
+        elif choice == '|':
+            print("Result:", Modulo(num1, num2))
+        elif choice == '%':
+            print("Result:", str(Percent(num1, num2)) +"%")
+        elif choice == '^':
+            print("Result:", Power(num1, num2))
+        else:
+            print("Invalid input")
+        exite_input = (input(f"If you want the result type ({exite_key}): "))
+        if "E" in exite_input :
+            break
+    except ValueError:
+        print("Could not convert string to float: ''")
