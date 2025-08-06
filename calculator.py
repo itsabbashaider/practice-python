@@ -29,7 +29,7 @@ def divide(x, y):
         return "Cannot divide by zero!"
     return x / y
 def Modulo(x, y):
-    return x % y
+    return int(x % y)
 def Percent(x, y):
     return round((x / y )* 100, 2)
 
