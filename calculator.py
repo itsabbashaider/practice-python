@@ -32,31 +32,28 @@ def Modulo(x, y):
     return int(x % y)
 def Percent(x, y):
     return round((x / y )* 100, 2)
+def Power(x, y):
+    return x ** y
 
-print("Select operation")
-print("1.add")
-print("2.multipy")
-print("3.subtract")
-print("4.divide")
-print("5.Modulo")
-print("6.Percent")
-
-choice = input("Enter choice (1/2/3/4/5/6): ")
 
 num1 = float(input("Enter first number: "))
+choice = input("Enter choice [+:*:-:/:|:%:^]: ")
 num2 = float(input("Enter second number: "))
 
-if choice == '1':
+
+if choice == '+':
     print("Result:", (add(num1, num2)))
-elif choice == '2':
+elif choice == '-':
     print("Result:", (subtract(num1, num2)))
-elif choice == '3':
+elif choice == '*':
     print("Result:", (multiply(num1, num2)))
-elif choice == '4':
+elif choice == '/':
     print("Result:", divide(num1, num2))
-elif choice == '5':
+elif choice == '|':
     print("Result:", Modulo(num1, num2))
-elif choice == '6':
+elif choice == '%':
     print("Result:", str(Percent(num1, num2)) +"%")
+elif choice == '^':
+    print("Result:", Power(num1, num2))
 else:
     print("Invalid input")
