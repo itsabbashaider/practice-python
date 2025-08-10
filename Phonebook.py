@@ -56,7 +56,7 @@ while True:
 
     if Action == '0':
         break
-    if Action == '1':
+    elif Action == '1':
         read_contact()
     elif Action == '2':
         edit_contact()
