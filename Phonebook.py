@@ -5,7 +5,7 @@ def load_contacts():
     try:#try used for opening and reading the txt file.
         with open(PHONE_BOOK_FILE, "r") as file: #We call 'r' so we can read contacts from the txt file.
             for line in file: #Loop on every line of the txt file.
-                name, number = line.strip().split(":")# Here we can remove all white spaces from L/R and separate them with colon (:).
+                name, number = line.strip().split(",")# Here we can remove all white spaces from L/R and separate them with comma (,).
                 Phone_book[name] = number
     except FileNotFoundError: #If it gives FileNotFoundError problem the except method will run our code without breaking the code.
         pass #Used pass for indentation requirment.
