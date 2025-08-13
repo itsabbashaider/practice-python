@@ -1,5 +1,3 @@
-PHONE_BOOK_FILE = "Phonebook.txt"  # Veriable for txt file .
-phone_book = {}
 def load_contacts(phone_book_file_path,contacts_dict):
     try:  # try used for opening and reading the txt file.
         with open(phone_book_file_path, "r") as file:  # We call 'r' so we can read contacts from the txt file.
@@ -60,6 +58,8 @@ def list_contacts(contacts_dict):
             print(f"{name}: {number}")
 
 def main():   
+    PHONE_BOOK_FILE = "Phonebook.txt"  # Veriable for txt file .
+    phone_book = {}
     load_contacts(PHONE_BOOK_FILE,phone_book)  # Calling this function so while loop loads all the contacts from Phonebook.txt into the phone_book dictionary.
 
     while True:
